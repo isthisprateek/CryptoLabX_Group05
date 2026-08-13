@@ -7,9 +7,9 @@ from logger import log_event, display_logs
 
 def dashboard(drone):
     while True:
-        print("\n" + "=" * 40)
+        print("\n" + "=" * 39)
         print("           DRONE CONTROL SYSTEM")
-        print("=" * 40)
+        print("=" * 39)
         print("1. Upload Waypoints")
         print("2. View Waypoints")
         print("3. Execute Mission")
