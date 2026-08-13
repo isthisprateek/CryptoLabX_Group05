@@ -1,1 +1,2 @@
 outputs/*.log
+secure_application/src/outputs/*.log
