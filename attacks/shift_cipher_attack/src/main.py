@@ -58,7 +58,7 @@ def main():
     ) = chi_square_attack(ciphertext)
 
     print("\n" + "=" * 60)
-    print("CHI-SQUARE ATTACK")
+    print("CHI-Square ATTACK")
     print("=" * 60)
 
     print(f"Predicted Key       : {chi_key}")
