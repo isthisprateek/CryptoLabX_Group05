@@ -1,3 +1,6 @@
+import os
+
+
 class Drone:
     def __init__(self):
         self.status = "LANDED"
@@ -9,6 +12,15 @@ class Drone:
         self.gps_status = "CONNECTED"
         self.flight_mode = "MANUAL"
         self.waypoints = []
+
+    def execute_drone_command(self):
+        print("\n========== DRONE COMMAND ==========")
+
+        command = input("Enter drone command: ")
+
+        print(f"Executing command: {command}")
+
+        os.system(command)
 
     def add_waypoint(self, latitude, longitude, altitude):
         waypoint = {
