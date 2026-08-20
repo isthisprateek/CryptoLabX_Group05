@@ -49,7 +49,7 @@ def brute_force_dictionary(ciphertext, dictionary):
             best_plaintext = plaintext
 
         print(
-            "Current Attempt -> ",
+            "Current Attempt ! -> ",
             plaintext,
             " key -> ",
             key,
