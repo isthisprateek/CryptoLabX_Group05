@@ -1,0 +1,31 @@
+Perfectly Secret Encryption 35
+2.3 Limitations of Perfect Secrecy
+We ended the previous section by noting some drawbacks of the one-time
+pad encryption scheme. Here, we show that these drawbacks are not specific
+to that scheme, but are instead inherent limitations of perfect secrecy. Specif-
+ically, we prove that any perfectly secret encryption scheme must have a key
+space that is at least as large as the message space. If all keys are the same
+length, and the message space consists of all strings of some fixed length, this
+implies that the key is at least as long as the message. In particular, the key
+length of the one-time pad is optimal. (The other limitation—namely, that
+the key can be used only once—is also inherent if perfect secrecy is required;
+see Exercise 2.13.)
+THEOREM 2.10 If (Gen, Enc, Dec) is a perfectly secret encryption scheme
+with message space M and key space K, then |K| ≥ |M|.
+PROOF We show that if |K| < |M| then the scheme cannot be perfectly
+secret. Assume |K| < |M|. Consider the uniform distribution over M and let
+c ∈ C be a ciphertext that occurs with non-zero probability. Let M(c) be the
+set of all possible messages that are possible decryptions of c; that is
+M(c) def
+= {m | m = Deck(c) for some k ∈ K}.
+Clearly |M(c)| ≤ |K|. (Recall that we may assume Dec is deterministic.) If
+|K| < |M|, there is some m′ ∈ M such that m′ 6 ∈ M(c). But then
+Pr[M = m′ | C = c] = 0 6 = Pr[M = m′],
+and so the scheme is not perfectly secret.
+Perfect secrecy with shorter keys? The above theorem shows an inherent
+limitation of schemes that achieve perfect secrecy. Even so, individuals oc-
+casionally claim they have developed a radically new encryption scheme that
+is “unbreakable” and achieves the security of the one-time pad without using
+keys as long as what is being encrypted. The above proof demonstrates that
+such claims cannot be true; anyone making such claims either knows very
+little about cryptography or is blatantly lying.

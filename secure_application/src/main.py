@@ -73,7 +73,7 @@ def main():
                 log_event("User logged in successfully")
                 dashboard(drone)
         elif choice == "2":
-        	emergency_mission_access(drone)
+            emergency_mission_access(drone)
         elif choice == "3":
             print("Exiting application...")
             break

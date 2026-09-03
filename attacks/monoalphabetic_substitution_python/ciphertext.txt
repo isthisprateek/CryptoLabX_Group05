@@ -1,0 +1,31 @@
+Hxanxkgiq Fxkaxg Xlkaqhgybl 35
+2.3 Iyoygpgyblf bn Hxanxkg Fxkaxkq
+Mx xluxu gwx haxtybjf fxkgybl dq lbgylv fbox uapmdpkcf bn gwx blx-gyox
+hpu xlkaqhgybl fkwxox. Wxax, mx fwbm gwpg gwxfx uapmdpkcf pax lbg fhxkynyk
+gb gwpg fkwxox, djg pax ylfgxpu ylwxaxlg iyoygpgyblf bn hxanxkg fxkaxkq. Fhxkyn-
+ykpiiq, mx habtx gwpg plq hxanxkgiq fxkaxg xlkaqhgybl fkwxox ojfg wptx p cxq
+fhpkx gwpg yf pg ixpfg pf ipavx pf gwx oxffpvx fhpkx. Yn pii cxqf pax gwx fpox
+ixlvgw, plu gwx oxffpvx fhpkx kblfyfgf bn pii fgaylvf bn fbox nyrxu ixlvgw, gwyf
+yohiyxf gwpg gwx cxq yf pg ixpfg pf iblv pf gwx oxffpvx. Yl hpagykjipa, gwx cxq
+ixlvgw bn gwx blx-gyox hpu yf bhgyopi. (Gwx bgwxa iyoygpgybl—lpoxiq, gwpg
+gwx cxq kpl dx jfxu bliq blkx—yf pifb ylwxaxlg yn hxanxkg fxkaxkq yf axzjyaxu;
+fxx Xrxakyfx 2.13.)
+GWXBAXO 2.10 Yn (Vxl, Xlk, Uxk) yf p hxanxkgiq fxkaxg xlkaqhgybl fkwxox
+mygw oxffpvx fhpkx O plu cxq fhpkx C, gwxl |C| ≥ |O|.
+HABBN Mx fwbm gwpg yn |C| < |O| gwxl gwx fkwxox kpllbg dx hxanxkgiq
+fxkaxg. Pffjox |C| < |O|. Kblfyuxa gwx jlynbao uyfgaydjgybl btxa O plu ixg
+k ∈ K dx p kyhwxagxrg gwpg bkkjaf mygw lbl-exab habdpdyiygq. Ixg O(k) dx gwx
+fxg bn pii hbffydix oxffpvxf gwpg pax hbffydix uxkaqhgyblf bn k; gwpg yf
+O(k) uxn
+= {o | o = Uxkc(k) nba fbox c ∈ C}.
+Kixpaiq |O(k)| ≤ |C|. (Axkpii gwpg mx opq pffjox Uxk yf uxgxaoylyfgyk.) Yn
+|C| < |O|, gwxax yf fbox o′ ∈ O fjkw gwpg o′ 6 ∈ O(k). Djg gwxl
+Ha[O = o′ | K = k] = 0 6 = Ha[O = o′],
+plu fb gwx fkwxox yf lbg hxanxkgiq fxkaxg.
+Hxanxkg fxkaxkq mygw fwbagxa cxqf? Gwx pdbtx gwxbaxo fwbmf pl ylwxaxlg
+iyoygpgybl bn fkwxoxf gwpg pkwyxtx hxanxkg fxkaxkq. Xtxl fb, yluytyujpif bk-
+kpfyblpiiq kipyo gwxq wptx uxtxibhxu p apuykpiiq lxm xlkaqhgybl fkwxox gwpg
+yf “jldaxpcpdix” plu pkwyxtxf gwx fxkjaygq bn gwx blx-gyox hpu mygwbjg jfylv
+cxqf pf iblv pf mwpg yf dxylv xlkaqhgxu. Gwx pdbtx habbn uxoblfgapgxf gwpg
+fjkw kipyof kpllbg dx gajx; plqblx opcylv fjkw kipyof xygwxa clbmf txaq
+iyggix pdbjg kaqhgbvaphwq ba yf dipgplgiq iqylv.
