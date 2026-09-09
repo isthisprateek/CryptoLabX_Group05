@@ -12,7 +12,7 @@ logging.
 
 ## Team Members
 
-| Name | Roll No. | Role |
+| Name | Roll No. | 
 |------|----------|------|
 | Prateek Kumar | 2024UCP1751| 
 | Ajay Yadav | 2024UCP1533 |  
@@ -23,7 +23,7 @@ logging.
 ```
 CryptoLabX/
 ├── classical/     # Classical ciphers (Caesar, Vigenere, Playfair, ...) - future
-├── attacks/       # Cryptanalysis / attack techniques - future
+├── attacks/       # Cryptanalysis / attack techniques 
 ├── math/          # Number theory & math helpers (modular arithmetic, GCD, etc.) - future
 ├── modern/         # Modern cryptography (AES, RSA, etc.) - future
 ├── analysis/       # Statistical / cryptanalytic analysis tools - future
