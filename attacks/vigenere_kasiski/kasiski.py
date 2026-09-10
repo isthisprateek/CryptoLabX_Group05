@@ -69,7 +69,14 @@ def find_factors(distances):
 
 def calculate_ic(text):
     """Calculate Index of Coincidence."""
-    return 0
+    if not text:
+        return 0
+    counts = collections.Counter(text)
+    n = len(text)
+    if n <= 1:
+        return 0
+    ic = sum(f * (f - 1) for f in counts.values()) / (n * (n - 1))
+    return ic
 
 def kasiski_analysis(text):
     """Use repeated patterns/distances to suggest candidate key lengths."""
@@ -172,6 +179,15 @@ def vigenere_encrypt(text, key):
         encrypted += c
     return encrypted
 
+def verify(plaintext, key, original_ciphertext):
+    """Check whether re-encryption produces the original ciphertext."""
+    re_encrypted = vigenere_encrypt(plaintext, key)
+    return re_encrypted == original_ciphertext
+
+def format_freq_table(freq_dict):
+    """Helper function to format frequency dictionaries nicely."""
+    sorted_freq = sorted(freq_dict.items(), key=lambda item: item[1], reverse=True)
+    return ", ".join([f"{k}: {v:.3f}" for k, v in sorted_freq[:5]]) + " ..."
 
 if __name__ == "__main__":
     print("-" * 50)
@@ -189,3 +205,30 @@ if __name__ == "__main__":
         print(f"    - Length {length}: IC = {ic:.4f}")
     
     print(f"\n=> Estimated Key Length: {est_key_len}")
+
+    # 3. Divide into groups
+    groups = split_into_groups(cleaned_ct, est_key_len)
+
+    # 4. Perform Frequency Analysis
+    print("\n[*] Frequency Tables (Top 5 for each group):")
+    for i, group in enumerate(groups):
+        freq = frequency_analysis(group)
+        print(f"    - Group {i+1}: {format_freq_table(freq)}")
+
+    # 5. Determine the probable key
+    recovered_key = find_key(groups)
+    print(f"\n=> Recovered Key: {recovered_key}")
+
+    # 6. Decrypt the ciphertext
+    recovered_plaintext = vigenere_decrypt(cleaned_ct, recovered_key)
+    print(f"\n=> Recovered Plaintext (First 100 chars):")
+    print(recovered_plaintext[:100] + "...")
+
+    # 7 & 8. Verify
+    print("\n[*] Verifying Recovery...")
+    is_valid = verify(recovered_plaintext, recovered_key, cleaned_ct)
+    if is_valid:
+        print("[SUCCESS] Re-encryption matches original ciphertext.")
+    else:
+        print("[FAILED] Re-encryption does not match.")
+    print("-" * 50)
