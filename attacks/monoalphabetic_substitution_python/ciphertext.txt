@@ -1,31 +1,31 @@
-Hxanxkgiq Fxkaxg Xlkaqhgybl 35
-2.3 Iyoygpgyblf bn Hxanxkg Fxkaxkq
-Mx xluxu gwx haxtybjf fxkgybl dq lbgylv fbox uapmdpkcf bn gwx blx-gyox
-hpu xlkaqhgybl fkwxox. Wxax, mx fwbm gwpg gwxfx uapmdpkcf pax lbg fhxkynyk
-gb gwpg fkwxox, djg pax ylfgxpu ylwxaxlg iyoygpgyblf bn hxanxkg fxkaxkq. Fhxkyn-
-ykpiiq, mx habtx gwpg plq hxanxkgiq fxkaxg xlkaqhgybl fkwxox ojfg wptx p cxq
-fhpkx gwpg yf pg ixpfg pf ipavx pf gwx oxffpvx fhpkx. Yn pii cxqf pax gwx fpox
-ixlvgw, plu gwx oxffpvx fhpkx kblfyfgf bn pii fgaylvf bn fbox nyrxu ixlvgw, gwyf
-yohiyxf gwpg gwx cxq yf pg ixpfg pf iblv pf gwx oxffpvx. Yl hpagykjipa, gwx cxq
-ixlvgw bn gwx blx-gyox hpu yf bhgyopi. (Gwx bgwxa iyoygpgybl—lpoxiq, gwpg
-gwx cxq kpl dx jfxu bliq blkx—yf pifb ylwxaxlg yn hxanxkg fxkaxkq yf axzjyaxu;
-fxx Xrxakyfx 2.13.)
-GWXBAXO 2.10 Yn (Vxl, Xlk, Uxk) yf p hxanxkgiq fxkaxg xlkaqhgybl fkwxox
-mygw oxffpvx fhpkx O plu cxq fhpkx C, gwxl |C| ≥ |O|.
-HABBN Mx fwbm gwpg yn |C| < |O| gwxl gwx fkwxox kpllbg dx hxanxkgiq
-fxkaxg. Pffjox |C| < |O|. Kblfyuxa gwx jlynbao uyfgaydjgybl btxa O plu ixg
-k ∈ K dx p kyhwxagxrg gwpg bkkjaf mygw lbl-exab habdpdyiygq. Ixg O(k) dx gwx
-fxg bn pii hbffydix oxffpvxf gwpg pax hbffydix uxkaqhgyblf bn k; gwpg yf
-O(k) uxn
-= {o | o = Uxkc(k) nba fbox c ∈ C}.
-Kixpaiq |O(k)| ≤ |C|. (Axkpii gwpg mx opq pffjox Uxk yf uxgxaoylyfgyk.) Yn
-|C| < |O|, gwxax yf fbox o′ ∈ O fjkw gwpg o′ 6 ∈ O(k). Djg gwxl
-Ha[O = o′ | K = k] = 0 6 = Ha[O = o′],
-plu fb gwx fkwxox yf lbg hxanxkgiq fxkaxg.
-Hxanxkg fxkaxkq mygw fwbagxa cxqf? Gwx pdbtx gwxbaxo fwbmf pl ylwxaxlg
-iyoygpgybl bn fkwxoxf gwpg pkwyxtx hxanxkg fxkaxkq. Xtxl fb, yluytyujpif bk-
-kpfyblpiiq kipyo gwxq wptx uxtxibhxu p apuykpiiq lxm xlkaqhgybl fkwxox gwpg
-yf “jldaxpcpdix” plu pkwyxtxf gwx fxkjaygq bn gwx blx-gyox hpu mygwbjg jfylv
-cxqf pf iblv pf mwpg yf dxylv xlkaqhgxu. Gwx pdbtx habbn uxoblfgapgxf gwpg
-fjkw kipyof kpllbg dx gajx; plqblx opcylv fjkw kipyof xygwxa clbmf txaq
-iyggix pdbjg kaqhgbvaphwq ba yf dipgplgiq iqylv.
+Behdegskn Veghes Ejghnbstfj 35
+2.3 Ktztsystfjv fd Behdegs Veghegn
+Xe ejlel spe bheotfiv vegstfj cn jfstjm vfze lhyxcyguv fd spe fje-stze
+byl ejghnbstfj vgpeze. Pehe, xe vpfx spys speve lhyxcyguv yhe jfs vbegtdtg
+sf spys vgpeze, cis yhe tjvseyl tjpehejs ktztsystfjv fd behdegs veghegn. Vbegtd-
+tgykkn, xe bhfoe spys yjn behdegskn veghes ejghnbstfj vgpeze zivs pyoe y uen
+vbyge spys tv ys keyvs yv kyhme yv spe zevvyme vbyge. Td ykk uenv yhe spe vyze
+kejmsp, yjl spe zevvyme vbyge gfjvtvsv fd ykk vshtjmv fd vfze dtwel kejmsp, sptv
+tzbktev spys spe uen tv ys keyvs yv kfjm yv spe zevvyme. Tj byhstgikyh, spe uen
+kejmsp fd spe fje-stze byl tv fbstzyk. (Spe fspeh ktztsystfj—jyzekn, spys
+spe uen gyj ce ivel fjkn fjge—tv ykvf tjpehejs td behdegs veghegn tv heqithel;
+vee Ewehgtve 2.13.)
+SPEFHEZ 2.10 Td (Mej, Ejg, Leg) tv y behdegskn veghes ejghnbstfj vgpeze
+xtsp zevvyme vbyge Z yjl uen vbyge U, spej |U| ≥ |Z|.
+BHFFD Xe vpfx spys td |U| < |Z| spej spe vgpeze gyjjfs ce behdegskn
+veghes. Yvvize |U| < |Z|. Gfjvtleh spe ijtdfhz ltvshtcistfj foeh Z yjl kes
+g ∈ G ce y gtbpehsews spys fggihv xtsp jfj-rehf bhfcyctktsn. Kes Z(g) ce spe
+ves fd ykk bfvvtcke zevvymev spys yhe bfvvtcke leghnbstfjv fd g; spys tv
+Z(g) led
+= {z | z = Legu(g) dfh vfze u ∈ U}.
+Gkeyhkn |Z(g)| ≤ |U|. (Hegykk spys xe zyn yvvize Leg tv lesehztjtvstg.) Td
+|U| < |Z|, spehe tv vfze z′ ∈ Z vigp spys z′ 6 ∈ Z(g). Cis spej
+Bh[Z = z′ | G = g] = 0 6 = Bh[Z = z′],
+yjl vf spe vgpeze tv jfs behdegskn veghes.
+Behdegs veghegn xtsp vpfhseh uenv? Spe ycfoe spefhez vpfxv yj tjpehejs
+ktztsystfj fd vgpezev spys ygpteoe behdegs veghegn. Eoej vf, tjltotliykv fg-
+gyvtfjykkn gkytz spen pyoe leoekfbel y hyltgykkn jex ejghnbstfj vgpeze spys
+tv “ijcheyuycke” yjl ygpteoev spe vegihtsn fd spe fje-stze byl xtspfis ivtjm
+uenv yv kfjm yv xpys tv cetjm ejghnbsel. Spe ycfoe bhffd lezfjvshysev spys
+vigp gkytzv gyjjfs ce shie; yjnfje zyutjm vigp gkytzv etspeh ujfxv oehn
+ktsske ycfis ghnbsfmhybpn fh tv ckysyjskn kntjm.
