@@ -121,6 +121,138 @@ class CountingOracle:
         return self.server.padding_oracle(iv, ciphertext)
 
 
+# ---------------------------
+# Attack
+# ---------------------------
+
+def recover_block(previous_block: bytes,
+                  target_block: bytes,
+                  oracle: CountingOracle) -> bytes:
+    """
+    Recover one plaintext block using the padding oracle.
+
+    CBC decryption:
+        P = D_K(C) XOR previous_block
+
+    Let:
+        I = D_K(C)
+
+    Then:
+        P = I XOR previous_block
+
+    We recover I one byte at a time from right to left.
+    """
+
+    if len(previous_block) != BLOCK_SIZE:
+        raise ValueError("previous_block must be 16 bytes")
+
+    if len(target_block) != BLOCK_SIZE:
+        raise ValueError("target_block must be 16 bytes")
+
+    intermediate = bytearray(BLOCK_SIZE)
+    recovered = bytearray(BLOCK_SIZE)
+
+    # Work from the last byte toward the first byte.
+    for pad in range(1, BLOCK_SIZE + 1):
+        index = BLOCK_SIZE - pad
+
+        # Start with a copy of the previous ciphertext block.
+        forged = bytearray(previous_block)
+
+        # Force already-recovered bytes to become the new padding value.
+        for j in range(BLOCK_SIZE - 1, index, -1):
+            forged[j] = intermediate[j] ^ pad
+
+        found = False
+
+        for guess in range(256):
+            forged[index] = guess
+
+            if not oracle.query(bytes(forged), target_block):
+                continue
+
+            # For pad == 1, a valid response can occasionally be caused by
+            # the target already having valid padding. Verify the candidate
+            # by perturbing the byte immediately before the padding.
+            if pad == 1:
+                check = bytearray(forged)
+                check[index - 1] ^= 1
+
+                if not oracle.query(bytes(check), target_block):
+                    # The candidate probably produced the original padding
+                    # length rather than a genuine 0x01 padding.
+                    continue
+
+            # If:
+            #   D_K(C)[index] XOR forged[index] == pad
+            #
+            # then:
+            #   D_K(C)[index] = forged[index] XOR pad
+            intermediate[index] = guess ^ pad
+
+            # Original plaintext:
+            #   P[index] = D_K(C)[index] XOR previous_block[index]
+            recovered[index] = intermediate[index] ^ previous_block[index]
+
+            found = True
+            break
+
+        if not found:
+            raise RuntimeError(
+                f"Could not recover byte at position {index}. "
+                "The oracle may not behave as expected."
+            )
+
+    return bytes(recovered)
+
+
+def padding_oracle_attack(iv: bytes,
+                          ciphertext: bytes,
+                          oracle: CountingOracle) -> bytes:
+    """
+    Recover the complete padded plaintext.
+
+    Notice what is NOT passed here:
+        - AES key
+        - AES cipher object
+        - original plaintext
+
+    The attack has only:
+        - IV
+        - ciphertext
+        - a yes/no padding oracle
+    """
+
+    if len(iv) != BLOCK_SIZE:
+        raise ValueError("Invalid IV length")
+
+    if not ciphertext or len(ciphertext) % BLOCK_SIZE != 0:
+        raise ValueError("Ciphertext must contain complete AES blocks")
+
+    blocks = [
+        ciphertext[i:i + BLOCK_SIZE]
+        for i in range(0, len(ciphertext), BLOCK_SIZE)
+    ]
+
+    recovered = bytearray()
+
+    for i, target_block in enumerate(blocks):
+        previous_block = iv if i == 0 else blocks[i - 1]
+
+        block_plaintext = recover_block(
+            previous_block,
+            target_block,
+            oracle
+        )
+
+        recovered.extend(block_plaintext)
+
+        print(
+            f"Recovered block {i + 1}/{len(blocks)}: "
+            f"{block_plaintext!r}"
+        )
+
+    return pkcs7_unpad(bytes(recovered))
 
 
 # ---------------------------
