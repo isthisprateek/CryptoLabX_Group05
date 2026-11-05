@@ -28,6 +28,7 @@ def miller_rabin(n: int, rounds: int = 40) -> bool:
 
     # Write n - 1 as d * 2**s, where d is odd.
     d = n - 1
+    
     s = 0
     while d % 2 == 0:
         d //= 2
